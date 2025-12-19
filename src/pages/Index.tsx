@@ -21,7 +21,7 @@ export default function Index() {
               <span className="text-xl font-bold">НИЦР МГТУ</span>
             </div>
             <div className="hidden md:flex gap-6">
-              {['Главная', 'О курсе', 'Программа', 'Преподаватель', 'Для кого', 'Регистрация', 'Контакты'].map((item) => (
+              {['Главная', 'О центре', 'Курсы', 'Программа', 'Преподаватель', 'Для кого', 'Регистрация', 'Контакты'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -42,7 +42,7 @@ export default function Index() {
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <Badge className="bg-primary/20 text-primary border-primary">МГТУ им. Баумана × Остек</Badge>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Инженер-технолог по производству радиоэлектронных средств
+                Центр компетенций по производству радиоэлектроники
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Профессиональная переподготовка от лидеров образования и индустрии приборостроения
@@ -58,29 +58,29 @@ export default function Index() {
               </div>
               <div className="grid grid-cols-3 gap-8 pt-12 border-t border-border/50">
                 <div>
-                  <div className="text-4xl font-bold text-primary">72</div>
-                  <div className="text-sm text-muted-foreground">часа обучения</div>
+                  <div className="text-4xl font-bold text-primary">256</div>
+                  <div className="text-sm text-muted-foreground">часов обучения</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary">90%</div>
-                  <div className="text-sm text-muted-foreground">компаний с кадровым голодом</div>
+                  <div className="text-4xl font-bold text-primary">2</div>
+                  <div className="text-sm text-muted-foreground">программы переподготовки</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary">30+</div>
-                  <div className="text-sm text-muted-foreground">лет опыта Остек</div>
+                  <div className="text-4xl font-bold text-primary">2030</div>
+                  <div className="text-sm text-muted-foreground">нацпроект до года</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="о-курсе" className="py-24 bg-secondary/50">
+        <section id="о-центре" className="py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-12">
               <div className="text-center space-y-4">
-                <h2 className="text-4xl md:text-5xl font-bold">О курсе</h2>
+                <h2 className="text-4xl md:text-5xl font-bold">О центре компетенций</h2>
                 <p className="text-xl text-muted-foreground">
-                  Уникальный образовательный проект в области приборостроения
+                  Развитие кадров для электронной промышленности России
                 </p>
               </div>
 
@@ -106,25 +106,156 @@ export default function Index() {
                 </Card>
               </div>
 
-              <Card className="p-8 bg-primary/10 border-primary/30">
-                <p className="text-lg leading-relaxed">
-                  Программа курса разработана совместными усилиями специалистов двух лидеров индустрии высшего образования и индустрии приборостроения. 
-                  В курсе обучения использовались практики ведущих мировых предприятий и бесценный опыт сотен отечественных производств.
-                </p>
+              <Card className="p-8 bg-primary/10 border-primary/30 space-y-6">
+                <h3 className="text-2xl font-bold">Цели создания центра</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3">
+                    <Icon name="Target" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span>Создание центра компетенции для развития материально-технической базы подготовки кадров для электронной промышленности</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Icon name="Rocket" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span>Участие в национальном проекте развития радиоэлектронной промышленности в России до 2030 года</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Icon name="GraduationCap" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span>Проведение обучения по созданию производств мирового уровня в сфере электроники</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Icon name="Users" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span>Целевая подготовка, дополнительное образование и повышение квалификации специалистов</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Icon name="Briefcase" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span>База практики и стажировки студентов, аспирантов и партнеров</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span>Создание опытных и экспериментальных образцов</span>
+                  </li>
+                </ul>
               </Card>
 
-              <div className="text-center p-8 bg-card border border-primary/30 rounded-lg">
-                <Icon name="TrendingUp" className="text-primary mx-auto mb-4" size={48} />
-                <h3 className="text-2xl font-bold mb-4">Самая востребованная профессия</h3>
-                <p className="text-muted-foreground text-lg">
-                  Инженер-технолог по производству радиоэлектронных средств – самая востребованная профессия в сфере производства электроники
+            </div>
+          </div>
+        </section>
+
+        <section id="курсы" className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto space-y-12">
+              <div className="text-center space-y-4">
+                <h2 className="text-4xl md:text-5xl font-bold">Наши программы</h2>
+                <p className="text-xl text-muted-foreground">
+                  Два курса профессиональной переподготовки
                 </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Wrench" className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <Badge className="mb-3">Курс 1</Badge>
+                      <h3 className="text-2xl font-bold mb-2">Инженер-технолог по производству РЭС</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Цель программы:</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Подготовка специалистов с профессиональными знаниями в области технологической подготовки и сопровождения производства РЭС. Полный цикл: от проектирования до контроля качества.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-2">Для кого:</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Инженерно-технические специалисты, технологи, операторы, наладчики, выпускники технических вузов
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
+                      <div>
+                        <div className="text-2xl font-bold text-primary">256</div>
+                        <div className="text-xs text-muted-foreground">академических часов</div>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold">Очная / Дистанционная</div>
+                        <div className="text-xs text-muted-foreground">форма обучения</div>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Badge variant="outline" className="text-xs">
+                        <Icon name="FileCheck" size={14} className="mr-1" />
+                        Диплом о профессиональной переподготовке
+                      </Badge>
+                    </div>
+                  </div>
+
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" onClick={() => scrollToSection('регистрация')}>
+                    Записаться на курс
+                  </Button>
+                </Card>
+
+                <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Crown" className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <Badge className="mb-3">Курс 2</Badge>
+                      <h3 className="text-2xl font-bold mb-2">Директор производства РЭС</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Цель программы:</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Подготовка квалифицированных руководителей для эффективного управления производственным процессом в сфере разработки и выпуска РЭС с учётом современных требований.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-2">Для кого:</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Инженерно-технические специалисты, менеджеры среднего и высшего звена, претенденты на должность директора производства
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
+                      <div>
+                        <div className="text-2xl font-bold text-primary">256</div>
+                        <div className="text-xs text-muted-foreground">академических часов</div>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold">Очная / Дистанционная</div>
+                        <div className="text-xs text-muted-foreground">форма обучения</div>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Badge variant="outline" className="text-xs">
+                        <Icon name="FileCheck" size={14} className="mr-1" />
+                        Диплом о профессиональной переподготовке
+                      </Badge>
+                    </div>
+                  </div>
+
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" onClick={() => scrollToSection('регистрация')}>
+                    Записаться на курс
+                  </Button>
+                </Card>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="для-кого" className="py-24">
+        <section id="для-кого" className="py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto space-y-12">
               <div className="text-center space-y-4">
@@ -145,7 +276,7 @@ export default function Index() {
                       <Icon name="TrendingUp" className="text-primary flex-shrink-0" size={24} />
                       <div>
                         <h4 className="font-bold mb-2">Повышение профессионализма</h4>
-                        <p className="text-sm text-muted-foreground">72 часа исключительно полезного экспертного контента</p>
+                        <p className="text-sm text-muted-foreground">256 часов исключительно полезного экспертного контента</p>
                       </div>
                     </div>
                   </Card>
